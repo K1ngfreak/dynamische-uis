@@ -1,3 +1,7 @@
+document.open()
+document.write("Het word berekent!");
+document.close()
+
 let uitleg = "In een parkeergarage passen 80 auto's op de begane grond en 120 op een verdieping.\n"+
 "Vraag het gewenste aantal auto's in de garage en bereken het aantal verdiepingen wat je nodig hebt.";
 
