@@ -1,15 +1,22 @@
-document.open()
-document.write("Het word berekent!");
-document.close()
-
 let uitleg = "In een parkeergarage passen 80 auto's op de begane grond en 120 op een verdieping.\n"+
 "Vraag het gewenste aantal auto's in de garage en bereken het aantal verdiepingen wat je nodig hebt.";
 
 alert(uitleg);
 let gewenste_aantal_autos = prompt("Hoeveel autos wilt u kwijt in de parkeergarage?");
+
+verdiepingen = Math.ceil((gewenste_aantal_autos - 80)/120);
 // Berekenen hier het aantal verdiepingen
 
-let antwoord = "Ik heb nog geen idee hoeveel verdiepingen er moeten komen :-( ";
-document.getElementById("antwoord").innerText = antwoord;
+console.log("berekening: " + verdiepingen);
 
-console.log("Om het gewenste aantal autos kwijt te kunnen heb ik x verdiepingen nodig.")
+if (verdiepingen < 1){
+    let antwoord = "Ik hebt alleen de begane grond nodig";
+    document.getElementById("antwoord").innerText = antwoord;
+    alert(antwoord)
+} else {
+    let antwoord = "Ik heb de begane grond en " + verdiepingen  + " verdiepingen nodig";
+    document.getElementById("antwoord").innerText = antwoord;
+    alert(antwoord)
+}
+
+console.log("Om het gewenste aantal autos kwijt te kunnen heb ik "+verdiepingen+" verdiepingen nodig.")
