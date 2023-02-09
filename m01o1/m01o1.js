@@ -4,13 +4,13 @@ let uitleg = "In een parkeergarage passen 80 auto's op de begane grond en 120 op
 alert(uitleg);
 let gewenste_aantal_autos = prompt("Hoeveel autos wilt u kwijt in de parkeergarage?");
 
-verdiepingen = Math.ceil((gewenste_aantal_autos - 80)/120);
 // Berekenen hier het aantal verdiepingen
+verdiepingen = Math.ceil((gewenste_aantal_autos - 80)/120);
 
 console.log("berekening: " + verdiepingen);
 
 if (verdiepingen < 1){
-    let antwoord = "Ik hebt alleen de begane grond nodig";
+    let antwoord = "Ik heb alleen de begane grond nodig";
     document.getElementById("antwoord").innerText = antwoord;
     alert(antwoord)
 } else {
