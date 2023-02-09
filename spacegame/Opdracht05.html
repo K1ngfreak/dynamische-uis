@@ -17,9 +17,13 @@
         //Eigen acties
         spaceShip.run(function () {
             // code  start
-
-
-
+            for (i = 0; i < 9; i++) {
+                if (i == 0 || i == 3 || i == 6) {
+                    spaceShip.wait()
+                    spaceShip.wait()
+                }
+                spaceShip.moveBackward()
+            }
             // code  einde
         });
     </script>
