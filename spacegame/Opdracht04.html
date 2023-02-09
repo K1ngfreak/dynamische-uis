@@ -17,23 +17,19 @@
         //Eigen acties
         spaceShip.run(function () {
             // code  start
-            spaceShip.rotateLeft()
-            spaceShip.moveForward()
-            spaceShip.rotateLeft()
             for (i = 0; i < 42; i++) {
+                if (i == 7 || i == 21 || i == 35) {
+                    spaceShip.rotateRight()
+                    spaceShip.moveForward()
+                    spaceShip.rotateRight()
+                }
+                if (i == 0 || i == 14 || i == 28) {
+                    spaceShip.rotateLeft()
+                    spaceShip.moveForward()
+                    spaceShip.rotateLeft()
+                }
                 spaceShip.moveForward()
-                if (i == 6 || i == 20 || i == 34) {
-                    spaceShip.rotateRight()
-                    spaceShip.moveForward()
-                    spaceShip.rotateRight()
-                }
-                if (i == 13 || i == 27) {
-                    spaceShip.rotateLeft()
-                    spaceShip.moveForward()
-                    spaceShip.rotateLeft()
-                }
             }
-
             // code  einde
         });
     </script>
