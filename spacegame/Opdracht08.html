@@ -17,9 +17,12 @@
         //Eigen acties
         spaceShip.run(function () {
             // code  start
-
-
-
+            for (i = 0; i < 37; i++) {
+                if (i == 8 || i == 15 || i == 21 || i == 26 || i == 30 || i == 33 || i == 35 || i == 36) {
+                    spaceShip.rotateLeft()
+                }
+                spaceShip.moveForward()
+            }
             // code  einde
         });
     </script>
