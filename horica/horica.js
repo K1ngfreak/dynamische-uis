@@ -1,4 +1,15 @@
+function bonnetje(bestelling){
+    document.write()
+    if (bestelling == "bier"){
+        document.write("    1,25")
+        finalprice = finalprice + 1,25 * total.bier;
+        console.log(finalprice)
+    }
+}
+
 questioning = "true"
+
+finalprice = 0
 
 const beschikbaar = ["fris", "wijn", "bier"];
 const bestelt = [];
@@ -29,11 +40,6 @@ while (questioning == "true") {
     }
 }
 
-console.log(bestelt);
 console.log(total)
 
-testing = bestelt.entries();
-
-for (i = 0; i < testing; i++){
-    console.log(i)
-}
+bestelt.forEach(bonnetje);
