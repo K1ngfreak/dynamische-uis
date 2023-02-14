@@ -2,18 +2,20 @@ questioning = "true"
 
 const beschikbaar = ["fris", "wijn", "bier"];
 const bestelt = [];
+const total = [];
 
 while (questioning == "true") {
     vraag = prompt("Wat wilt u bestellen?");
     vraag = vraag.toLowerCase()
 
     if (beschikbaar.includes(vraag)) {
-        aantal = prompt("hoeveel glazen " + vraag + " wilt u hebben?");
+        aantal = Number(prompt("hoeveel glazen " + vraag + " wilt u hebben?"));
 
-        if (bestelt[vraag] == undefined) {
-            bestelt[vraag] = aantal;
+        if (total[vraag] == undefined) {
+            total[vraag] = aantal;
+            bestelt.push(vraag)
         } else {
-            bestelt[vraag] += aantal;
+            total[vraag] += aantal;
         }
 
         more = prompt("wilt u meer bestellen?");
@@ -28,4 +30,10 @@ while (questioning == "true") {
 }
 
 console.log(bestelt);
+console.log(total)
 
+testing = bestelt.entries();
+
+for (i = 0; i < testing; i++){
+    console.log(i)
+}
