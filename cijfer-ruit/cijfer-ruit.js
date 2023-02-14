@@ -1,11 +1,11 @@
-chosenNumber = prompt("Geef een getal in");
+chosenNumber = Number(prompt("Geef een getal in"));
 const numberlist = []
 last = ""
 
 for (i = 0; i < chosenNumber; i++){
-    number= i+1 + "-";
+    number= i+1 + " - ";
     last = last + number
-    trimmedNumber = last.slice(0,-1)
+    trimmedNumber = last.slice(0,-3)
     numberlist[i] = trimmedNumber
     document.write(trimmedNumber + "<br>")
 }
