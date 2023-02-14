@@ -1,14 +1,21 @@
 questioning = "true"
 
-const bestelt = []
+const beschikbaar = ["fris", "wijn", "bier"];
+const bestelt = [];
 
 while (questioning == "true") {
     vraag = prompt("Wat wilt u bestellen?");
+    vraag = vraag.toLowerCase()
 
-    if (vraag == "fris" || vraag == "Fris" || vraag == "bier" || vraag == "Bier" || vraag == "wijn" || vraag == "Wijn") {
+    if (beschikbaar.includes(vraag)) {
         aantal = prompt("hoeveel glazen " + vraag + " wilt u hebben?");
-        bestelt.push(vraag, aantal);
-        console.log(bestelt);
+
+        if (bestelt[vraag] == undefined) {
+            bestelt[vraag] = aantal;
+        } else {
+            bestelt[vraag] += aantal;
+        }
+
         more = prompt("wilt u meer bestellen?");
         if (more == "N" || more == "n" || more == "Nee" || more == "nee") {
             questioning = "false";
@@ -19,4 +26,6 @@ while (questioning == "true") {
         alert("foutmelding: dit ken ik niet");   
     }
 }
+
+console.log(bestelt);
 
