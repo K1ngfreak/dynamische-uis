@@ -1,19 +1,25 @@
-function bonnetje(bestelling){
-    document.write()
-    if (bestelling == "bier"){
-        document.write("    1,25")
-        finalprice = finalprice + 1,25 * total.bier;
-        console.log(finalprice)
-    }
-}
-
-questioning = "true"
-
-finalprice = 0
-
 const beschikbaar = ["fris", "wijn", "bier"];
 const bestelt = [];
 const total = [];
+
+function bonnetje(bestelling) {
+    finalprice = 0
+    if (bestelling == "bier") {
+        document.write(total.bier + " " + bestelling + " --- 2,90" + "<br>")
+        finalprice = finalprice + 2.90 * total.bier;
+
+    } else if (bestelling == "wijn") {
+        document.write(total.wijn + " " + bestelling + " --- 4,50" + "<br>")
+        finalprice = finalprice + 4.50 * total.wijn;
+
+    } else if (bestelling == "fris") {
+        document.write(total.fris + " " + bestelling + " --- 2,80" + "<br>")
+        finalprice = finalprice + 2.80 * total.fris
+    }
+    return finalprice
+}
+
+questioning = "true"
 
 while (questioning == "true") {
     vraag = prompt("Wat wilt u bestellen?");
@@ -40,6 +46,11 @@ while (questioning == "true") {
     }
 }
 
-console.log(total)
+bon = 0
 
-bestelt.forEach(bonnetje);
+for (i = 0; i < bestelt.length; i++) {
+    bon = bon + bonnetje(bestelt[i])
+}
+
+document.write("<br>" + "--------------------" + "<br>")
+document.write("totaal: &#8364;" + bon.toFixed(2))
