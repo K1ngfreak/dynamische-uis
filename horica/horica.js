@@ -6,15 +6,15 @@ function bonnetje(bestelling) {
     finalprice = 0
     if (bestelling == "bier") {
         document.write(total.bier + " " + bestelling + " --- 2,90" + "<br>")
-        finalprice = finalprice + 2.90 * total.bier;
+        finalprice = 2.90 * total.bier;
 
     } else if (bestelling == "wijn") {
         document.write(total.wijn + " " + bestelling + " --- 4,50" + "<br>")
-        finalprice = finalprice + 4.50 * total.wijn;
+        finalprice = 4.50 * total.wijn;
 
     } else if (bestelling == "fris") {
         document.write(total.fris + " " + bestelling + " --- 2,80" + "<br>")
-        finalprice = finalprice + 2.80 * total.fris
+        finalprice = 2.80 * total.fris
     }
     return finalprice
 }
