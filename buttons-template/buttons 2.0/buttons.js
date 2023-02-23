@@ -1,7 +1,3 @@
-button1 = 0
-button2 = 0
-button3 = 0
-
 function buttonFunction(buttonNumber) {
     if (buttonNumber == 0) {
         document.getElementById("imgid").src="images/0.jpg";
