@@ -54,3 +54,5 @@ for (i = 0; i < bestelt.length; i++) {
 
 document.write("<br>" + "--------------------" + "<br>")
 document.write("totaal: &#8364;" + bon.toFixed(2))
+
+bonnetje(3, 6, 8)

@@ -6,12 +6,16 @@
    <link rel="stylesheet" type="text/css" href="buttons.css">
 </head>
 <body>
-
-    <button type="button" id="btn1" onclick="buttonFunction()">button 1</button>
-    <button type="button" id="btn2" onclick="buttonFunction()">button 2</button>
-    <button type="button" id="btn3" onclick="buttonFunction()">button 3</button>
-
     <script src="buttons.js" async></script>
+    <button type="button" id="btn1" onclick="button1Function()">button 1</button>
+    <button type="button" id="btn2" onclick="button2Function()">button 2</button>
+    <button type="button" id="btn3" onclick="button3Function()">button 3</button>
+
+    <p class=reset>
+        <button type="button" id="reset" onclick="buttonReset()">clear</button>
+    </p>
+    
+    <p id="picture"></p>
 </body>
 </html>
 
