@@ -10,3 +10,8 @@ button {
 body {
     text-align: center;
 }
+
+.resetbtn {
+    background-color: #FF0000;
+    color: #ffbf00;
+}
