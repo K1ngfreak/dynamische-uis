@@ -12,20 +12,43 @@ function checkKey(e) {
     e = e || window.event;
     if(e.keyCode == 32){
     	console.log("spacebar");
+
     } else if (e.keyCode == '38' || e.keyCode == '87') {  // up arrow or w
-        horizontal = horizontal - 5;
-        image.style.marginTop = horizontal + "px";
+        if (horizontal == 0) {
+            horizontal = 850
+        } else {
+            horizontal = horizontal - 5;
+        }
+        image.style.transform = "rotate(0deg)"
+
     } else if (e.keyCode == '40' || e.keyCode == '83') { // down arrow or s
-        horizontal = horizontal + 5;
-        image.style.marginTop = horizontal + "px";
+        if (horizontal == 850) {
+            horizontal = 0
+        } else {
+            horizontal = horizontal + 5;
+        }
+        image.style.transform = "rotate(180deg)"
+
     } else if (e.keyCode == '37' || e.keyCode == '65') { // left arrow or a
-        vertical = vertical - 5;
-        image.style.marginLeft = vertical + "px";
+        if (vertical == 0) {
+            vertical = 1790
+        } else {
+            vertical = vertical - 5;
+        }
+        image.style.transform = "rotate(-90deg)"
+
     } else if (e.keyCode == '39' || e.keyCode == '68') {   // right arrow or d
-        vertical = vertical + 5;
-        image.style.marginLeft = vertical + "px";
+        if (vertical == 1790) {
+            vertical = 0
+        } else {
+            vertical = vertical + 5;
+        }
+        image.style.transform = "rotate(90deg)"
     }
-    
+
+    image.style.marginTop = horizontal + "px";
+    image.style.marginLeft = vertical + "px";
+
     if (e.keyCode == 38 || e.keyCode == 87 || e.keyCode == 40 || e.keyCode == 83 || e.keyCode == 37 || e.keyCode == 65 || e.keyCode == 39 || e.keyCode == 68) {
         document.getElementById("image").style.backgroundPosition = 
         `-${position}px 0px`; 
@@ -36,4 +59,3 @@ function checkKey(e) {
     }
    
 }
-
