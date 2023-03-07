@@ -50,12 +50,11 @@ function checkKey(e) {
     image.style.marginLeft = vertical + "px";
 
     if (e.keyCode == 38 || e.keyCode == 87 || e.keyCode == 40 || e.keyCode == 83 || e.keyCode == 37 || e.keyCode == 65 || e.keyCode == 39 || e.keyCode == 68) {
-        document.getElementById("image").style.backgroundPosition = 
-        `-${position}px 0px`; 
-        if (position < 668)
-        { position = position + 84;}
-        else
-        { position = 80; }
+        document.getElementById("image").style.backgroundPosition =  `-${position}px 0px`; 
+        if (position < 668) {
+            position = position + 84;
+        } else {
+            position = 80;
+        }
     }
-   
 }
