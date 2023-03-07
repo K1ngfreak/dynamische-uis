@@ -14,8 +14,11 @@ function checkKey(e) {
         console.log("down");
     } else if (e.keyCode == '37' || e.keyCode == '65') { // left arrow or a
     	console.log("left");
+        image.style.left = image.offsetLeft + 20 + "px";
     } else if (e.keyCode == '39' || e.keyCode == '68') {   // right arrow or d
     	console.log("right");
     	image.style.backgroundPosition = `164px 0px`; // check goed de rupsband
     }
 }
+
+// 80, 164, 248, 332, 416, 500, 584, 668
