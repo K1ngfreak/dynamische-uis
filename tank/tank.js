@@ -15,14 +15,14 @@ function checkKey(e) {
 
     } else if (e.keyCode == '38' || e.keyCode == '87') {  // up arrow or w
         if (horizontal == 0) {
-            horizontal = 850
+            horizontal = 630
         } else {
             horizontal = horizontal - 5;
         }
         image.style.transform = "rotate(0deg)"
 
     } else if (e.keyCode == '40' || e.keyCode == '83') { // down arrow or s
-        if (horizontal == 850) {
+        if (horizontal == 630) {
             horizontal = 0
         } else {
             horizontal = horizontal + 5;
@@ -31,14 +31,14 @@ function checkKey(e) {
 
     } else if (e.keyCode == '37' || e.keyCode == '65') { // left arrow or a
         if (vertical == 0) {
-            vertical = 1790
+            vertical = 1400
         } else {
             vertical = vertical - 5;
         }
         image.style.transform = "rotate(-90deg)"
 
     } else if (e.keyCode == '39' || e.keyCode == '68') {   // right arrow or d
-        if (vertical == 1790) {
+        if (vertical == 1400) {
             vertical = 0
         } else {
             vertical = vertical + 5;
