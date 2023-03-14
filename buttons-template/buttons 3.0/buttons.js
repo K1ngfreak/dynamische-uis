@@ -1,18 +1,34 @@
 function buttonChange(button) {
-    if (list[button] == undefined) {
-        list[button] = 1;
-        document.getElementById(button).style.backgroundColor = "red"
-    } else {
-        if (list[button] == 1) {
-            document.getElementById(button).style.backgroundColor = "purple"
-        } else if (list[button] == 2) {
-            document.getElementById(button).style.backgroundColor = "blue"
-        } else {
-            document.getElementById(button).style.backgroundColor = "black"
-            document.getElementById(button).disabled = true;
-        }
-        list[button] += 1;
+    for (i = 0; i <= list.length; i++) {
+        console.log(i)
     }
+
+    test = document.getElementById(button)
+    style = getComputedStyle(test);
+  
+    console.log(style['background-color']);
+
+    if (lightgreen == style['background-color']) {
+        console.log(8)
+    }
+
+
+
+
+    // if (list[button] == undefined) {
+    //     list[button] = 1;
+    //     document.getElementById(button).style.backgroundColor = "red"
+    // } else {
+    //     if (list[button] == 1) {
+    //         document.getElementById(button).style.backgroundColor = "purple"
+    //     } else if (list[button] == 2) {
+    //         document.getElementById(button).style.backgroundColor = "blue"
+    //     } else {
+    //         document.getElementById(button).style.backgroundColor = "black"
+    //     }
+    //     list[button] += 1;
+    //     console.log(list)
+    // }
 }
 
 const list = []

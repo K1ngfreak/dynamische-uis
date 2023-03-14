@@ -36,7 +36,8 @@ while (questioning == "true") {
         }
 
         more = prompt("wilt u meer bestellen?");
-        if (more == "N" || more == "n" || more == "Nee" || more == "nee") {
+        more = more.toLowerCase()
+        if (more == "n" || more == "nee") {
             questioning = "false";
         } else {
             questioning = "true";
@@ -54,5 +55,3 @@ for (i = 0; i < bestelt.length; i++) {
 
 document.write("<br>" + "--------------------" + "<br>")
 document.write("totaal: &#8364;" + bon.toFixed(2))
-
-bonnetje(3, 6, 8)

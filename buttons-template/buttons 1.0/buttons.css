@@ -1,16 +1,13 @@
 button {
+    background-image: ;
     background-color: #48DDDF;
-    border: outset double;
-    border-radius: 30px;
+    /* border: outset double; */
+    /* border-radius: 30px; */
     color: #0023FF;
-    padding: 55px 110px;
+    /* padding: 55px 110px; */
     text-align: center;
 }
 
 body {
-    text-align: center;
-}
-
-.reset{
     text-align: center;
 }
