@@ -1,19 +1,12 @@
 function buttonChange(button) {
     for (i = 0; i <= list.length; i++) {
-        console.log(i)
+        if (list[i] == button.style.backgroundColor) {
+            button.style.backgroundColor=list[i+1]
+            break
+        } else if (button.style.backgroundColor == "black") {
+            button.remove()
+        }
     }
-
-    test = document.getElementById(button)
-    style = getComputedStyle(test);
-  
-    console.log(style['background-color']);
-
-    if (lightgreen == style['background-color']) {
-        console.log(8)
-    }
-
-
-
 
     // if (list[button] == undefined) {
     //     list[button] = 1;
@@ -31,7 +24,7 @@ function buttonChange(button) {
     // }
 }
 
-const list = []
+const list = ["lightgreen", "red", "purple", "blue", "black"]
 totalButton = Number(prompt("how many buttons do you want?"))
 body = document.getElementsByTagName("body")[0];
 
@@ -45,10 +38,11 @@ for (i = 1; i <= totalButton; i++) {
     x++
     button = document.createElement("button");
     button.innerHTML = "Button " + i;
-    button.id = "Button " + i
+    button.id = "Button" + i
+    button.style.backgroundColor="lightgreen"
     body.appendChild(button);
     button.addEventListener ("click", function() {
-    buttonChange(this.innerHTML);
+    buttonChange(this);
     })
     if (x == br) {
         x = 0
