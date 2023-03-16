@@ -1,13 +1,15 @@
-button {
-    background-image: ;
-    background-color: #48DDDF;
-    /* border: outset double; */
-    /* border-radius: 30px; */
-    color: #0023FF;
-    /* padding: 55px 110px; */
-    text-align: center;
+body {
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-position: -40px 0px;
 }
 
-body {
-    text-align: center;
+button {
+    background-color: #48DDDF;
+    color: #0023FF;
+}
+
+.image {
+    padding: 180px;
+    margin: 20px;
 }
