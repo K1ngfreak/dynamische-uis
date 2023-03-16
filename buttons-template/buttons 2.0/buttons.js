@@ -1,12 +1,15 @@
-function buttonFunction(buttonNumber) {
+function buttonFunction(button) {
     for (i = 1; i <= 3; i++) {
-        document.getElementById("btn"+i).style.backgroundColor="#04FF00";
-        document.getElementById("btn"+i).style.color="#0023FF";
-        document.getElementById("btn"+i).disabled = false;
+        document.getElementById(i).style.backgroundColor="#04FF00";
+        document.getElementById(i).style.color="#0023FF";
+        document.getElementById(i).disabled = false;
     }
 
-    document.getElementById("imgid").src="images/"+buttonNumber+".jpg"
-    document.getElementById("btn"+buttonNumber).style.backgroundColor="#FF0000";
-    document.getElementById("btn"+buttonNumber).style.color="#ffbr00";
-    document.getElementById("btn"+buttonNumber).disabled = true;    
+    document.getElementById("imgId").src="images/"+button.id+".jpg";
+    document.getElementById("bgImgId").style.backgroundImage = "url('images/bg"+button.id+".jpg')";
+    document.getElementById(button.id).style.backgroundColor="#FF0000";
+    document.getElementById(button.id).style.color="#ffbr00";
+    document.getElementById(button.id).disabled = true;
+    btnName = parseInt(button.innerHTML);
+    button.innerHTML = btnName + 1;
 }
