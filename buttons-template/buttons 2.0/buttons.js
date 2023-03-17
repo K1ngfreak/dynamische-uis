@@ -10,6 +10,5 @@ function buttonFunction(button) {
     document.getElementById(button.id).style.backgroundColor="#FF0000";
     document.getElementById(button.id).style.color="#ffbr00";
     document.getElementById(button.id).disabled = true;
-    btnName = parseInt(button.innerHTML);
-    button.innerHTML = btnName + 1;
+    button.innerHTML = parseInt(button.innerHTML) + 1;
 }
