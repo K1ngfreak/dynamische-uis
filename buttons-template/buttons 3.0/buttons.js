@@ -1,5 +1,5 @@
 function buttonChange(button) {
-    for (i = 0; i <= list.length; i++) {
+    for (i = 0; i < list.length; i++) {
         if (list[i] == button.style.backgroundColor) {
             button.style.backgroundColor=list[i+1]
             break
