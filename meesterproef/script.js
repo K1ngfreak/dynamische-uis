@@ -6,14 +6,11 @@ function startGame() {
         for (i=1; i <= 52; i++) {
             document.getElementById(i).remove()
         }
-        for (o=1; o <= 4; o++) {
-            document.getElementById(o).remove()
-        }
     }
     x = 0
     for (i=52; i > 4; i--) {
         x++
-        placement = document.getElementsByTagName("div")[0];
+        div = document.getElementsByTagName("div")[0];
         button = document.createElement("button");
         button.innerHTML = "";
         button.style.padding = "13px"
@@ -21,24 +18,26 @@ function startGame() {
         button.style.width = "20px"
         button.id = i
         button.disabled = true
-        placement.appendChild(button);
+        div.appendChild(button);
         button.addEventListener ("click", function() {
             colorChange(this);
         })
         if (x == 4) {
+
             para = document.createElement("p")
             div.appendChild(para)
             x = 0
         }
         if (i == 5) {
             for (u=4; u > 0; u--) {
+            div = document.getElementsByTagName("div")[0];
             button = document.createElement("button");
             button.innerHTML = "";
             button.style.padding = "13px"
             button.style.height = "20px"
             button.style.width = "20px"
             button.id = u
-            placement.appendChild(button);
+            div.appendChild(button);
             button.addEventListener ("click", function() {
                 colorChange(this);
             })
@@ -76,11 +75,11 @@ for (i=0; i < 4; i++) {
 
 console.log(code)
 
-placement1 = document.getElementsByTagName("div")[0];
+div = document.getElementsByTagName("div")[0];
 button = document.createElement("button");
 button.innerHTML = "Start a game";
 button.id = "start"
-placement1.appendChild(button);
+div.appendChild(button);
 button.addEventListener ("click", function() {
     startGame();
 })
