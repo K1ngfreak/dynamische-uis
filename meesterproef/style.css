@@ -12,13 +12,16 @@
 body{
     background-color: silver;
 }
+
 h1{
     width: var(--mainwidth);
     text-align: center;
     margin: 20px auto;
     color: var(--darkcolor)
 }
+
 #container {
+    position:relative;
     width: var(--mainwidth);
     height: 440px;
     background-color: var(--lightcolor);
@@ -34,4 +37,10 @@ footer {
     font-weight: bold;
     color: var(--lightcolor);
     padding-top: 10px;
+}
+
+#start{
+    position:absolute;
+    bottom: 0px;
+    right: 280px;
 }
