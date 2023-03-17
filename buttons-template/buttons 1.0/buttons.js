@@ -1,6 +1,5 @@
 function buttonFunction(button) {    
     document.getElementById("imgId").src="images/"+button.id+".jpg"
-    btnName = parseInt(button.innerHTML)
-    button.innerHTML = btnName + 1
+    button.innerHTML = parseInt(button.innerHTML) + 1
     document.getElementById("container").style.backgroundImage = "url('images/bg"+button.id+".jpg')"
 }
