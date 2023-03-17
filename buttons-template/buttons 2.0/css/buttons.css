@@ -3,13 +3,18 @@ button {
     color: #0023FF;
 }
 
-body {
-    background-repeat: no-repeat;
-    background-size: 300px 300px;
-    background-position: -40px 0px;
+#container {
+    position:relative;
+    width: 650px;
+    height: 650px;
+    background-image: url('../images/bg0.jpg');
+    border: 1px solid black;
 }
 
-.image {
-    padding: 180px;
-    margin: 20px;
+img {
+    height: 180px;
+    width: 180px;
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
 }

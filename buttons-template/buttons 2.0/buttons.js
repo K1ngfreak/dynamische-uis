@@ -6,7 +6,7 @@ function buttonFunction(button) {
     }
 
     document.getElementById("imgId").src="images/"+button.id+".jpg";
-    document.getElementById("bgImgId").style.backgroundImage = "url('images/bg"+button.id+".jpg')";
+    document.getElementById("container").style.backgroundImage = "url('images/bg"+button.id+".jpg')";
     document.getElementById(button.id).style.backgroundColor="#FF0000";
     document.getElementById(button.id).style.color="#ffbr00";
     document.getElementById(button.id).disabled = true;
