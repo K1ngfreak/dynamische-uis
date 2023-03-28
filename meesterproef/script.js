@@ -1,14 +1,49 @@
+function enter() {
+    para = document.createElement("p")
+    div.appendChild(para)
+}
+
+function control(c) {
+    div = document.getElementsByTagName("div")[0];
+    button = document.createElement("button");
+    button.innerHTML = "";
+    button.style.padding = "13px"
+    button.style.height = "20px"
+    button.style.width = "20px"
+    button.disabled = true
+    button.id = "control"+c
+    div.appendChild(button);
+}
+
 function startGame() {
+    c = 12
     document.getElementById("start").innerHTML = "start a new game"
-    document.getElementById("start").style.right = "260px"
+    document.getElementById("start").style.right = "265px"
 
     if (y > 0) {
-        for (i=1; i <= 52; i++) {
+        for (i=1; i <= 4; i++) {
+            document.getElementById("code"+i).remove()
+        }
+        for (i=1; i <= 48; i++) {
             document.getElementById(i).remove()
+        }
+        for (i=1; i <= 12; i++) {
+            document.getElementById("control"+i).remove()
         }
     }
     x = 0
-    for (i=52; i > 4; i--) {
+    for (i=1; i <= 4; i++) {
+        div = document.getElementsByTagName("div")[0];
+        button = document.createElement("button");
+        button.innerHTML = "";
+        button.style.padding = "13px"
+        button.style.height = "20px"
+        button.style.width = "20px"
+        button.id = "code"+i
+        div.appendChild(button);
+    }
+    enter()
+    for (i=48; i > 4; i--) {
         x++
         div = document.getElementsByTagName("div")[0];
         button = document.createElement("button");
@@ -23,9 +58,9 @@ function startGame() {
             colorChange(this);
         })
         if (x == 4) {
-
-            para = document.createElement("p")
-            div.appendChild(para)
+            control(c)
+            enter()
+            c -= 1
             x = 0
         }
         if (i == 5) {
@@ -42,6 +77,7 @@ function startGame() {
                 colorChange(this);
             })
             }
+        control(c)
         }
     }
     y += 1
