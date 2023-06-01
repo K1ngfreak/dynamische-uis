@@ -3,6 +3,18 @@ function enter() {
     div.appendChild(para)
 }
 
+function submit(c) {
+    div = document.getElementsByTagName("div")[0];
+    button = document.createElement("button");
+    button.innerHTML = "guess";
+    button.disabled = true
+    button.id = "guess"+c
+    div.appendChild(button);
+    button.addEventListener ("click", function() {
+        guessing(this);
+    })
+}
+
 function control(c) {
     div = document.getElementsByTagName("div")[0];
     button = document.createElement("button");
@@ -29,6 +41,7 @@ function startGame() {
         }
         for (i=1; i <= 12; i++) {
             document.getElementById("control"+i).remove()
+            document.getElementById("submit"+i).remove()
         }
     }
     x = 0
@@ -59,6 +72,7 @@ function startGame() {
         })
         if (x == 4) {
             control(c)
+            submit(c)
             enter()
             c -= 1
             x = 0
@@ -99,6 +113,10 @@ function colorChange(button) {
     }
 }
 
+function guessing() {
+
+}
+
 const colors = ["white", "blue", "orange", "yellow", "green", "red"]
 const code = []
 const guess = []
@@ -119,3 +137,17 @@ div.appendChild(button);
 button.addEventListener ("click", function() {
     startGame();
 })
+
+
+for (i=0; i < 4; i++) {
+    if (guess[i] == code[i]) {
+        document.getElementById(option + i).style.backgroundColor = "white"
+    } else {
+        for (x = 0; x < 4; x++) {
+            if (guess[i] == code[x]) {
+                document.getElementById(option + i).style.backgroundColor = "black"
+                break
+            }
+        }
+    }
+}
